@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
  **/
 @RestController
 @Slf4j
-@RequestMapping("payment")
+@RequestMapping("/payment")
 public class PaymentController {
 	@Autowired
 	PaymentService paymentService;
@@ -47,5 +47,10 @@ public class PaymentController {
 		}else {
 			return new CommonResult (444,"select fail");
 		}
+	}
+
+	@GetMapping(value = "/lb")
+	public String getPaymentLB() {
+		return serverPort;
 	}
 }
