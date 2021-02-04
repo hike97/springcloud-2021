@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * @Version 1.0
  **/
 @Component
-@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT")
+@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT",fallback = PaymentHystrixFallback.class)
 public interface PaymentHystrixService {
     @GetMapping("/payment/hystrix/ok/{id}")
     public String paymentInfo_OK(@PathVariable("id") Integer id);
