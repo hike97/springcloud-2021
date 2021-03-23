@@ -277,3 +277,4 @@
 /cloud-provider-hystrix-payment8001/target/classes/com/atguigu/springcloud/PaymentHystrixMain8001.class
 /cloud-consumer-feign-hystrix-order80/target/classes/com/atguigu/springcloud/service/PaymentHystrixService.class
 /cloud-provider-hystrix-payment8001/target/classes/com/atguigu/springcloud/service/PaymentService.class
+/.idea/libraries/*
