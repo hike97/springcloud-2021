@@ -22,11 +22,12 @@ public class MyLB implements LoadBalancer{
      */
     private AtomicInteger atomicInteger = new AtomicInteger(0);
 
-    public final int getAndIncreasement(){
+    public final int getAndIncrement(){
         int current;
         int next;
         for (;;) {
               current = atomicInteger.get();
+              //2147483647 超过最大 归零
               next = current>=Integer.MAX_VALUE?0:current+1;
             if (atomicInteger.compareAndSet(current, next)){
                 log.info("第{}次访问",next);
@@ -36,7 +37,7 @@ public class MyLB implements LoadBalancer{
     }
     @Override
     public ServiceInstance instances(List<ServiceInstance> serviceInstances) {
-        int index = getAndIncreasement()%serviceInstances.size();
+        int index = getAndIncrement() % serviceInstances.size();
         return serviceInstances.get(index);
     }
 }

@@ -13,11 +13,11 @@ import org.springframework.stereotype.Component;
 public class PaymentHystrixFallback implements PaymentHystrixService{
     @Override
     public String paymentInfo_OK(Integer id) {
-        return "paymentInfo_OK --------------fallback /(ㄒoㄒ)/~~";
+        return "PaymentHystrixService paymentInfo_OK --------------fall back ,/(ㄒoㄒ)/~~";
     }
 
     @Override
     public String paymentInfo_TimeOut(Integer id) {
-        return "paymentInfo_TimeOut --------------fallback /(ㄒoㄒ)/~~";
+        return "PaymentHystrixService paymentInfo_TimeOut --------------fall back, /(ㄒoㄒ)/~~";
     }
 }

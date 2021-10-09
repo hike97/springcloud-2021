@@ -5,8 +5,11 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+#因为openfeign内置ribbon 所以控制超时时间需要用Ribbon
 ribbon:
+  #连接所用时间
   ReadTimeout:  5000
+  #读取所用时间时间
   ConnectTimeout: 5000
 #打开feign的log
 logging:

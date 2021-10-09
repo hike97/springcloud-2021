@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @ClassName FeignConfig
- * @Description TODO
+ * @Description 配置feign的日志
  * @Author hike97
  * @Date 2021/2/3 15:13
  * @Version 1.0
