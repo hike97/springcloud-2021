@@ -9,8 +9,6 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>cloud-api-common</module>
-    <module>cloud-provider-payment8001</module>
-    <module>cloud-provider-payment8001</module>
     <module>cloud-provider-payment8002</module>
     <module>cloud-eureka-server7001</module>
     <module>cloud-eureka-server7002</module>
@@ -33,7 +31,6 @@
     <module>cloudalibaba-provider-payment9004</module>
       <module>cloudalibaba-consumer-nacos-order84</module>
       <module>seata-order-service2001</module>
-      <module>cloud-gateway-gateway9527</module>
   </modules>
   <packaging>pom</packaging>
   <!-- 统一管理jar包版本 -->
